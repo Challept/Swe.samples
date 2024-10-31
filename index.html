@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swe Samples</title>
+
+    <!-- Lägg till favicon här -->
+    <link rel="icon" type="image/png" href="VF__1_-removebg-preview.png">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        /* Annonsbar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #00aaff, #00ff7f);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .announcement-bar p {
+            display: inline-block;
+            animation: fadeInOut 5s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+        }
+
+        /* Bild under annonsbaren och promobaren */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+        }
+
+        /* Produkter */
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: calc(33.33% - 20px); /* Exakt en tredjedel av raden */
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 320px;
+        }
+
+        .product-card img {
+            margin: 0 auto;
+            max-width: 120px;
+            height: auto;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h3, .product-card p {
+            margin: 5px 0;
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: auto;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #0077cc;
+        }
+
+        /* Mobilanpassning */
+        @media (max-width: 768px) {
+            .product-card {
+                width: calc(50% - 20px); /* Två per rad på mindre skärmar */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                width: calc(100% - 20px); /* En per rad på väldigt små skärmar */
+            }
+        }
+
+        /* Om oss sektion */
+        .about-us {
+            background-color: #f0f0f0;
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+            margin-top: 50px;
+        }
+
+        .about-us h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: slideInFromRight 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Annonsbar -->
+    <div class="announcement-bar" id="announcement-bar">
+        <p id="announcement-text">Handla nu, betala med Swish!</p>
+    </div>
+
+    <!-- Bild nedanför barerna -->
+    <div class="image-container">
+        <img src="VF_Parfym_Samples.png" alt="VF Parfym Samples">
+    </div>
+
+    <!-- Produkter -->
+    <section class="product-section">
+        <div class="product-card">
+            <img src="https://vfparfym.com/o.90010.jpg" alt="Aqua di Gio Profondo">
+            <h3>Aqua di Gio Profondo</h3>
+            <p>5ml</p>
+            <p>85 kr</p>
+            <button class="buy-button" onclick="window.location.href='https://vfparfym.com/betala-med-swish'">Köp nu</button>
+        </div>
+        <div class="product-card">
+            <img src="https://vfparfym.com/LattafaMAHIRLEGACYZ.webp" alt="Maahir Legacy">
+            <h3>Maahir Legacy</h3>
+            <p>5ml</p>
+            <p>35 kr</p>
+            <button class="buy-button" onclick="window.location.href='https://vfparfym.com/betala-med-swish'">Köp nu</button>
+        </div>
+        <div class="product-card">
+            <img src="https://vfparfym.com/pasteur2.01_1400x_7d5a3adb-6778-4611-acd7-b3741d88b540.webp" alt="One Bold Chemist">
+            <h3>One Bold Chemist</h3>
+            <p>5ml</p>
+            <p>40 kr</p>
+            <button class="buy-button" onclick="window.location.href='https://vfparfym.com/betala-med-swish'">Köp nu</button>
+        </div>
+        <div class="product-card">
+            <img src="https://vfparfym.com/pasteur2.01_1400x_7d5a3adb-6778-4611-acd7-b3741d88b540.webp" alt="One Bold Chemist 10ml">
+            <h3>One Bold Chemist</h3>
+            <p>10ml</p>
+            <p>90 kr</p>
+            <button class="buy-button" onclick="window.location.href='https://vfparfym.com/betala-med-swish'">Köp nu</button>
+        </div>
+    </section>
+
+    <!-- Om oss sektion -->
+    <section class="about-us">
+        <h2>Välkommen till VF Parfym</h2>
+        <p>Swe Samples är ett nytt och lovande parfymföretag som erbjuder exklusiva parfym samples från några av världens mest kända märken. Vi fokuserar på att göra det enkelt för dig att upptäcka nya dofter utan att behöva köpa en hel flaska. Just nu erbjuder vi samples från 5 noggrant utvalda märken, och vi utökar ständigt vårt sortiment!</p>
+        <p>Hos oss på VF Parfym handlar allt om att ge dig en lyxig upplevelse i ett praktiskt format. Oavsett om du vill prova en ny trendig doft eller återvända till en klassisk favorit, hjälper vi dig att hitta rätt. Vi är stolta över att vara ett företag som prioriterar kvalitet, kundnöjdhet och variation.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Swe samples. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script>
+        const messages = [
+            "Handla nu, betala med Swish!",
+            "Upptäck våra bästsäljare idag!",
+            "Alltid bra priser!",
+            "Exklusiva dofter här!",
+            "Handla parfym idag!",
+            "Beställ dina samples!",
+            "Snabb leverans på alla beställningar!",
+            "Dofter från världens främsta märken!",
+            "Säkra betalningar med Swish!"
+        ];
+
+        let messageIndex = 0;
+        const messageElement = document.getElementById("announcement-text");
+
+        function rotateMessages() {
+            messageElement.textContent = messages[messageIndex];
+            messageIndex = (messageIndex + 1) % messages.length;
+        }
+
+        setInterval(rotateMessages, 5000);
+    </script>
+</body>
+</html>
